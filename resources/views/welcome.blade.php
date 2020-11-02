@@ -27,11 +27,11 @@
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                     @else
-                        <a href="{{ route('jobs.index') }}" class="text-sm text-gray-700 underline">Missions</a>
-                        <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 underline">Login</a>
+                        <a href="{{ route('jobs.index') }}" class="text-sm text-gray-700 underline">Voir les missions</a>
+                        <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 underline">Se connecter</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">S'enregistrer</a>
                         @endif
                     @endif
                 </div>
@@ -56,7 +56,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                Cette application utilise la solution TALL stack et est semblable aux plateformes que l'on peut trouver sur internet qui mettent en relation les freelances et les clients sur des missions. Elle embarque des fonctionnalités comme un système de recherche avec les keydown events, système de favoris, chats entre freelances et clients, une classe livewire dédiée aux flash messages, des policies et plein d'autres choses.
+                                Application reactive construite avec le TALL stack. Basée sur les plateformes qui mettent en relation les freelances et les clients. Elle embarque des fonctionnalités suivantes : Système de recherche avec les keydown events, système de favoris, chats entre freelances et clients, une classe Livewire dédiée aux messages flash, des policies et plein d'autres choses.
                                 </div>
                             </div>
                         </div>
@@ -68,23 +68,23 @@
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
                             <span class="-mt-px w-5 h-5 text-gray-400">🌬️</span>
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
+                            <a href="https://tailwindcss.com/" class="ml-1 underline">
                                 TailwindCSS
                             </a>
 
                             <span class="ml-4 -mt-px w-5 h-5 text-gray-400">⛰️</span>
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
+                            <a href="https://github.com/alpinejs/alpine" class="ml-1 underline">
                                 AlpineJS
                             </a>
 
-                            <span class="ml-4 -mt-px w-5 h-5 text-gray-400">🦑</span>
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Livewire
+                            <span class="ml-4 -mt-px w-5 h-5 text-gray-400">📦</span>
+                            <a href="https://laravel.com/" class="ml-1 underline">
+                                Laravel
                             </a>
 
-                            <span class="ml-4 -mt-px w-5 h-5 text-gray-400">📦</span>
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Laravel
+                            <span class="ml-4 -mt-px w-5 h-5 text-gray-400">🦑</span>
+                            <a href="https://laravel-livewire.com/" class="ml-1 underline">
+                                Livewire
                             </a>
                         </div>
                     </div>
