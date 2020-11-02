@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## A propos de cette application
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Cette application utilise la solution TALL stack (🌬️ Tailwind, ⛰️ Alpine.js, 📦 Laravel et 🦑 Livewire) et est semblable aux plateformes que l'on peut trouver sur internet qui mettent en relation les freelances et les clients sur des missions. Elle embarque des fonctionnalités comme un système de recherche avec les keydown events, système de favoris, chats entre freelances et clients, une classe livewire dédiée aux flash messages, des policies et plein d'autres choses. 
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
