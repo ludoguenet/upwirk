@@ -55,6 +55,8 @@ class Search extends Component
 
     public function updatedQuery()
     {
+        $this->resetIndex();
+        
         $words = '%' . $this->query . '%';
 
         if (strlen($this->query) >= 2) {
