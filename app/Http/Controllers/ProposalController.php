@@ -16,19 +16,19 @@ class ProposalController extends Controller
 
     public function submitStore(Request $request, Job $jobId)
     {
-        if (!auth()->user()->proposals->contains('job_id', $jobId->id)) {
-            $proposal = Proposal::create([
-                'job_id' => $jobId->id
-            ]);
+        $request->validate([
+            'coverLetter' => 'required|max:255' 
+        ]);
 
-            if ($request->input('coverLetter')) {
-                CoverLetter::create([
-                    'proposal_id' => $proposal->id,
-                    'content' => $request->input('coverLetter')
-                ]);
-            }
-        }
+        $proposal = Proposal::create([
+            'job_id' => $jobId->id
+        ]);
 
+        CoverLetter::create([
+            'proposal_id' => $proposal->id,
+            'content' => $request->input('coverLetter')
+        ]);
+ 
         return redirect()->route('jobs.index');
     }
 

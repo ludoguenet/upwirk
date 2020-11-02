@@ -6,6 +6,9 @@
   @csrf
   <h3 class="text-green-700">Lettre de motivation</h3>
   <textarea name="coverLetter" class="border w-full rounded block py-2 px-3"></textarea>
+  @error('coverLetter')
+    <span class="text-red-400 text-sm">{{ $message }}</span>
+  @enderror
   <button type="submit" class="bg-green-500 text-white hover:bg-green-700 transition ease-in-out duration-500 rounded-md shadow-md w-full block px-4 py-2 mt-3">Envoyez ma candidature</button>
 </form>
 @endsection

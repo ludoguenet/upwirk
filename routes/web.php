@@ -3,7 +3,6 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
-use App\Http\Controllers\SaveController;
 use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\ConversationController;
 
@@ -20,14 +19,6 @@ use App\Http\Controllers\ConversationController;
 
 Route::get('/', function () {
     return view('welcome');
-
-    // $user = User::find(1);
-
-    // foreach($user->conversations as $c) {
-    //     foreach($c->messages as $m) {
-    //         var_dump($m->content);
-    //     }
-    // }
 });
 
 Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
@@ -35,8 +26,6 @@ Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/jobs/{id}', [JobController::class, 'show'])->name('jobs.show');
     Route::get('/home', [ProposalController::class, 'home'])->name('home');
-
-    Route::post('/saveJob/{id}', [SaveController::class, 'store'])->name('save.store');
 
     Route::get('/conversations', [ConversationController::class, 'index'])->name('conversations.index');
     Route::get('/conversation/{conversation}', [ConversationController::class, 'show'])->name('conversation.show');
